@@ -20096,7 +20096,7 @@ button:focus {
   outline: 0;
 }
 .navbar .dropdown .dropdown-toggle:after {
-  color: var(--bs-gray-500);
+  color:#f05a25;
   content: "\f282";
   font-family: bootstrap-icons !important;
   line-height: 1.5rem;
@@ -20222,7 +20222,7 @@ button:focus {
   }
 }
 .navbar-dark .navbar-nav .dropdown .dropdown-toggle:after {
-  color: var(--bs-gray-300);
+  color: #f05a25;
 }
 @media (max-width: 990px) {
   .navbar-dark .navbar-nav .dropdown .dropdown-toggle:after {
