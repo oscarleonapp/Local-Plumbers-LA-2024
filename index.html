@@ -35,6 +35,8 @@
   <!-- Theme CSS -->
   <link rel="stylesheet" href="./assets/css/theme.min.css" />
   <link rel="stylesheet" href="./assets/css/reviwstyle.css" />
+  <link rel="stylesheet" href="./assets/css/cupon.css">
+
 
   <!-- Analytics Code -->
 
@@ -228,8 +230,8 @@
               </li>
             </ul>
             <div class="mt-3 mt-lg-0 d-flex align-items-center">
-              <a href="#" class="btn btn-light mx-2" onClick="HCPWidget.openModal()">Book an Apoinment</a>
-              <a href="#" class="btn btn-primary">Call (855) 505-6225</a>
+              <a class="btn btn-light mx-2" onClick="HCPWidget.openModal()">Book an Apoinment</a>
+              <a href="tel:(855) 505-6225" class="btn btn-primary">Call (855) 505-6225</a>
             </div>
           </div>
         </div>
@@ -747,7 +749,7 @@
               </div>
               <div class="col-lg-4 col-md-5">
                 <div class="text-center">
-                  <a href="#" class="btn btn-primary">COUPON</a>
+                  <a class="btn btn-primary" id="openModal1">COUPON</a>
                 </div>
               </div>
             </div>
@@ -757,32 +759,22 @@
     </section>
     <!--project idea-->
 
-    <!-- PRUEBA CUPON -->
-    <div id="cupon-modal" class="modal">
+  <!-- Modal Cuopon -->
+    <div id="modal1" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>¡Cupón de descuento!</h2>
-        <p>Usa el código <strong id="cupon-code">DESCUENTO2024</strong> y obtén un descuento del 10%.</p>
-        <div id="countdown">Tiempo restante: <span id="timer">10:00</span></div>
-        <button id="tomar-cupon">Tomar Cupón</button>
+          <span class="close" id="closeModal1">&times;</span>
+          <h2>COUPON DISCOUNT 15%</h2>
+          <button id="openModal2" class="btn btn-primary">Make and Apoinment and get a discount</button>
       </div>
-    </div>
-    <!-- END PRUEBA MODAL -->
-    <!-- REGISTRO CUPON -->
-    <div id="segundo-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Enlace del Cupón</h2>
-        <p>
-          Acá se mostrara un formulario de Google con los datos requeridos para cambiar el cupon y los datos
-          llegarán
-          al correo de local plumbers.
-        </p>
-        <!-- Puedes agregar un iframe o contenido adicional aquí -->
-      </div>
-    </div>
-    <!-- END REGISTRO CUPON -->
+  </div>
 
+  <div id="modal2" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModal2">&times;</span>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKIFGOuOkZVYrd1HwK93tWxhig4AwKglnKrwcXKwMf38FTCg/viewform?embedded=true" width="640" height="416" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+      </div>
+  </div>
+    <!-- Modal Cuopon -->
     <!--Testimonial start-->
     <section class="py-5 py-lg-7 bg-light-subtle">
       <div class="container">
@@ -2634,6 +2626,8 @@
     <script async
     src="https://online-booking.housecallpro.com/script.js?token=0c3af1c3f7dd496b95de2907ab5ccf4f&orgName=Local-Plumbers">
     </script>
+    <!-- Cuopon -->
+    <script src="./assets/js/cuopon.js"></script>
 </body>
 
 </html>
