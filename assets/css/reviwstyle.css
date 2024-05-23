@@ -702,7 +702,7 @@
 }
 
 .rplg-badge .rplg-badge-actions .rplg-links a:hover {
-  background: #ccc !important;
+  background: #ee5925 !important;
 }
 
 .rplg-badge .rplg-row {
@@ -998,14 +998,14 @@
 
 .rplg-form .rplg-links a {
   padding: 2px 8px !important;
-  background-color: #eee !important;
-  border: 1px solid #dedede !important;
-  text-shadow: 1px 1px 0 #f5f5f5 !important;
+  background-color: #ee5925 !important;
+  border: 1px solid #ee5925 !important;
+  /* text-shadow: 1px 1px 0 #f5f5f5 !important; */
   transition: all 0.2s ease-in-out !important;
 }
 
 .rplg-form .rplg-links a:hover {
-  background-color: #dfdfdf !important;
+  background-color: #db4d1a !important;
 }
 
 .rplg-form .rplg-form-footer {
