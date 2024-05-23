@@ -258,7 +258,7 @@
                 </p>
               </div>
               <div class="d-md-flex d-grid align-items-center justify-content-md-center gap-4">
-                <a href="#!" class="btn btn-primary rounded-pill">BOOK AN APPOINTMENT TODAY</a>
+                <a href="#!" class="btn btn-primary rounded-pill" onClick="HCPWidget.openModal()">BOOK AN APPOINTMENT TODAY</a>
                 <a href="https://search.google.com/local/reviews?placeid=ChIJnd5sWG6PwoARR2mq7lj94g4"
                   class="link-white icon-link icon-link-hover card-grid-link d-flex justify-content-center"
                   target="_blank">
@@ -732,6 +732,56 @@
       </div>
     </section>
     <!--Project we done end-->
+
+    <!--project idea-->
+    <section class="py-lg-8 py-5 bg-gray-900">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12">
+            <div class="row align-items-center">
+              <div class="col-lg-8 col-md-7">
+                <div class="text-center text-md-start mb-6 mb-md-0">
+                  <h2 class="text-white-stable">Book an appointment and get a discount coupon</h2>
+                  <p class="mb-0 text-dark-50">AVAILABLE FOR 24/7 EMERGENCY SERVICES</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-5">
+                <div class="text-center">
+                  <a href="#" class="btn btn-primary">COUPON</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--project idea-->
+
+    <!-- PRUEBA CUPON -->
+    <div id="cupon-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¡Cupón de descuento!</h2>
+        <p>Usa el código <strong id="cupon-code">DESCUENTO2024</strong> y obtén un descuento del 10%.</p>
+        <div id="countdown">Tiempo restante: <span id="timer">10:00</span></div>
+        <button id="tomar-cupon">Tomar Cupón</button>
+      </div>
+    </div>
+    <!-- END PRUEBA MODAL -->
+    <!-- REGISTRO CUPON -->
+    <div id="segundo-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enlace del Cupón</h2>
+        <p>
+          Acá se mostrara un formulario de Google con los datos requeridos para cambiar el cupon y los datos
+          llegarán
+          al correo de local plumbers.
+        </p>
+        <!-- Puedes agregar un iframe o contenido adicional aquí -->
+      </div>
+    </div>
+    <!-- END REGISTRO CUPON -->
 
     <!--Testimonial start-->
     <section class="py-5 py-lg-7 bg-light-subtle">

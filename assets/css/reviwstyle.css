@@ -2754,3 +2754,8 @@ r-p rp-dot.active {
   opacity: 1;
   background: #154fc1;
 }
+
+/* Ocultar Reviews */
+#miElemento {
+  display: none;
+}
