@@ -1,16 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
-}
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-}
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
@@ -26,7 +19,8 @@ button {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
+    text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
@@ -42,4 +36,18 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.coupon {
+    border: 2px dashed #000;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.coupon h2 {
+    color: #001f7f;
+}
+
+.coupon p {
+    color: #e90000;
 }

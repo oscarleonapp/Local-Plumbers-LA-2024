@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Modal 2
     const modal2 = document.getElementById("modal2");
-    const btnOpenModal2 = document.getElementById("openModal2");
     const spanCloseModal2 = document.getElementById("closeModal2");
+
+    // Coupon and Print button
+    const btnPrintCoupon = document.getElementById("printCoupon");
+    const couponElement = document.getElementById("coupon");
 
     // Abrir Modal 1
     btnOpenModal1.onclick = function() {
@@ -19,10 +22,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         modal1.style.display = "none";
     }
 
-    // Abrir Modal 2 desde Modal 1
-    btnOpenModal2.onclick = function() {
-        modal1.style.display = "none";
-        modal2.style.display = "block";
+    // Capturar y descargar cupón sin mostrar el botón "Print"
+    btnPrintCoupon.onclick = function() {
+        // Ocultar el botón "Print"
+        btnPrintCoupon.style.display = "none";
+        
+        // Capturar y descargar la imagen del cupón
+        html2canvas(couponElement).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'cupon.png';
+            link.click();
+
+            // Mostrar el botón "Print" nuevamente
+            btnPrintCoupon.style.display = "inline-block";
+        });
     }
 
     // Cerrar Modal 2

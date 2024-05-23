@@ -37,6 +37,9 @@
   <link rel="stylesheet" href="./assets/css/reviwstyle.css" />
   <link rel="stylesheet" href="./assets/css/cupon.css">
 
+<!-- Generate cupons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 
   <!-- Analytics Code -->
 
@@ -760,19 +763,32 @@
     <!--project idea-->
 
   <!-- Modal Cuopon -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-          <span class="close" id="closeModal1">&times;</span>
-          <h2>COUPON DISCOUNT 15%</h2>
-          <button id="openModal2" class="btn btn-primary">Make and Apoinment and get a discount</button>
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModal1">&times;</span>
+      <div class="coupon" id="coupon">
+          <h2 class="text-primary">10% Discount</h2>
+          <p class="text-danger">For Military, Police, Firefighters, Teachers and Senior Citizens</p>
+          <p>Limit to one household. Discount only available to military, police, firefighters, teachers and senior citizens.</p>
+          <img src="./assets/images/cuopons/1.png" alt=""> <br><br>
+          <button id="printCoupon" class="btn btn-primary">Print</button>
       </div>
   </div>
+</div>
 
-  <div id="modal2" class="modal">
-      <div class="modal-content">
-          <span class="close" id="closeModal2">&times;</span>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKIFGOuOkZVYrd1HwK93tWxhig4AwKglnKrwcXKwMf38FTCg/viewform?embedded=true" width="640" height="416" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-      </div>
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModal2">&times;</span>
+      <h2>Formulario</h2>
+      <form id="form">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required><br><br>
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          <input type="submit" value="Enviar" class="btn">
+      </form>
   </div>
     <!-- Modal Cuopon -->
     <!--Testimonial start-->
