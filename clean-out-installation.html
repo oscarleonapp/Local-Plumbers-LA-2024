@@ -401,7 +401,7 @@
               or too small for us.
             </p>
             <br>
-            <p><strong>LINCENSE</strong>
+            <p><strong>LICENSE</strong>
             <br>
             109582
           </p>
@@ -646,10 +646,32 @@
   <script src="./assets/libs/scrollcue/scrollCue.min.js"></script>
   <script src="./assets/js/vendors/scrollcue.js"></script>
   <script src="./assets/js/vendors/tab-to-dropdown.js"></script>
+  <!-- Ocultar menu -->
+  <!-- Reviews -->
+  <script src="assets/js/reviews.js"></script>
+  <script>
+    // Función para mostrar u ocultar el elemento
+    function mostrarOcultar() {
+      var elemento = document.getElementById("miElemento");
+
+      // Verificar si el elemento está visible
+      if (elemento.style.display === "none") {
+        // Si está oculto, mostrarlo
+        elemento.style.display = "block";
+      } else {
+        // Si está visible, ocultarlo
+        elemento.style.display = "none";
+      }
+    }
+  </script>
     <!-- Book an Apoinment -->
     <script async
     src="https://online-booking.housecallpro.com/script.js?token=0c3af1c3f7dd496b95de2907ab5ccf4f&orgName=Local-Plumbers">
     </script>
+    <!-- Cuopon -->
+    <script src="./assets/js/cuopon.js"></script>
+    <!-- Chat -->
+    <script id="housecall-pro-chat-bubble" src="./assets/js/chat.js" type="text/javascript" data-color="#ff6a00" data-organization="545c3b04-d309-40f3-a781-162a89ea6502" defer></script>
 </body>
 
 </html>
