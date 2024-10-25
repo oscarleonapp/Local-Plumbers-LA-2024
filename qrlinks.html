@@ -95,7 +95,7 @@ a:hover {
             <!-- <h3 class="text-white mb-4">My Tool Bag</h3> -->
 
             <div class="card mb-3">
-                <a href="#" class="text-decoration-none">
+                <a href="qrlinks.html#housecall-pro-chat-bubble" class="text-decoration-none">
                 <div class="card-body">
                     <img src="assets/images/iconos - linktree/schedule.png" alt="Local Plumbers Schedule a Service Online" width="40" class="me-3">
                     Schedule a Service Online
@@ -111,7 +111,7 @@ a:hover {
             </a>
             </div>
             <div class="card mb-3">
-                <a href="onClick=HCPWidget.openModal()" class="text-decoration-none">
+                <a href="" class="text-decoration-none" target="_blank">
                 <div class="card-body">
                     <img src="assets/images/iconos - linktree/chat.png" alt="Local Plumbers LiveChat with Us" width="40" class="me-3">
                    LiveChat with Us
@@ -137,11 +137,34 @@ a:hover {
         </div>
     </div>
 
+    <script>
+        // Espera a que el script de Housecall Pro esté listo
+        function openChatIfHashPresent() {
+            if (window.location.hash === "#housecall-pro-chat-bubble") {
+                if (typeof HCPWidget !== "undefined" && typeof HCPWidget.openModal === "function") {
+                    HCPWidget.openModal();
+                } else {
+                    // Reintentar después de un pequeño retraso si el widget aún no está listo
+                    setTimeout(openChatIfHashPresent, 500);
+                }
+            }
+        }
+        // Llama a la función al cargar la página
+        openChatIfHashPresent();
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Book an Apoinment -->
         <script async
         src="https://online-booking.housecallpro.com/script.js?token=0c3af1c3f7dd496b95de2907ab5ccf4f&orgName=Local-Plumbers">
         </script>
+
+
+
+
+
+            <!-- Chat -->
+    <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#ff6a00" data-organization="545c3b04-d309-40f3-a781-162a89ea6502" defer></script>
 </body>
 </html>
