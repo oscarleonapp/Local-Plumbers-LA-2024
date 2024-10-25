@@ -138,20 +138,32 @@ a:hover {
     </div>
 
     <script>
-        // Espera a que el script de Housecall Pro esté listo
         function openChatIfHashPresent() {
             if (window.location.hash === "#housecall-pro-chat-bubble") {
                 if (typeof HCPWidget !== "undefined" && typeof HCPWidget.openModal === "function") {
                     HCPWidget.openModal();
+                    // Limpiar el hash de la URL después de abrir el chat
+                    clearHash();
                 } else {
                     // Reintentar después de un pequeño retraso si el widget aún no está listo
                     setTimeout(openChatIfHashPresent, 500);
                 }
             }
         }
-        // Llama a la función al cargar la página
+    
+        function clearHash() {
+            // Usa history.replaceState para eliminar el hash sin recargar la página
+            history.replaceState(null, null, window.location.pathname);
+        }
+    
+        // Llama a la función al cargar la página por primera vez
         openChatIfHashPresent();
+    
+        // Observa los cambios en el hash para abrir el chat sin recargar
+        window.addEventListener("hashchange", openChatIfHashPresent);
     </script>
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
