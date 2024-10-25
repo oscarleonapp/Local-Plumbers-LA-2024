@@ -70,6 +70,27 @@ a:hover {
     font-size: 2rem; /* Ajustar tamaño de iconos */
 }
 
+.custom-chat-card {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(232, 154, 55, 0.5);
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icono-personalizado {
+    width: 2rem;
+    height: 2rem;
+}
+
+
 </style>
 <body>
     <div class="container text-center py-5">
@@ -87,7 +108,12 @@ a:hover {
                 <a href="#" class="text-white mx-2"><i class="bi bi-google fa-2x"></i></a>
                 <a href="#" class="text-white mx-2"><i class="bi bi-bing fa-2x"></i></a>
                 <a href="https://www.yelp.com/biz/local-plumbers-los-angeles?uid=0n4rG0Zk1tMMaP7x6qZAuw&utm_source=ishare" class="text-white mx-2"><i class="bi bi-yelp fa-2x"></i></a>
-
+                <a href="URL_DE_IMAGEN_1" class="text-white mx-2" target="_blank">
+                    <img src="assets/images/qr-links/n.png" alt="Icono 1" class="icono-personalizado">
+                </a>
+                <a href="URL_DE_IMAGEN_2" class="text-white mx-2" target="_blank">
+                    <img src="assets/images/qr-links/t.png" alt="Icono 2" class="icono-personalizado">
+                </a>
 
 
             </div>
@@ -134,8 +160,34 @@ a:hover {
                 </div>
             </a>
             </div>
+
+            <!-- <div class="card mb-3" onclick="openHousecallChat()">
+                <div class="card-body">
+                    <img src="assets/images/iconos - linktree/chat.png" alt="Local Plumbers LiveChat with Us" width="40" class="me-3">
+                    LiveChat with Us
+                </div>
+            </div> -->
+            
+            
+            <!-- <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#ff6a00" data-organization="545c3b04-d309-40f3-a781-162a89ea6502" defer></script> -->
+            
+            
         </div>
     </div>
+
+    <script>
+function openHousecallChat() {
+    // Verifica si el widget HCPWidget está listo
+    if (typeof HCPWidget !== "undefined" && typeof HCPWidget.openModal === "function") {
+        HCPWidget.openModal();
+    } else {
+        // Si el widget aún no está listo, vuelve a intentarlo después de un breve retraso
+        setTimeout(openHousecallChat, 500);
+    }
+}
+
+
+    </script>
 
     <script>
         function openChatIfHashPresent() {
@@ -171,10 +223,6 @@ a:hover {
         <script async
         src="https://online-booking.housecallpro.com/script.js?token=0c3af1c3f7dd496b95de2907ab5ccf4f&orgName=Local-Plumbers">
         </script>
-
-
-
-
 
     <!-- Chat -->
     <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#ff6a00" data-organization="545c3b04-d309-40f3-a781-162a89ea6502" defer></script>
