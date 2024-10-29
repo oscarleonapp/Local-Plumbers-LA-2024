@@ -125,6 +125,30 @@ a:hover {
         display: none;
     }
 
+.icon-color{
+    color: #dc4900;
+}
+
+.arrow-indicator {
+    position: absolute;
+    right: 35px; /* Ajusta según sea necesario */
+    bottom: 70px; /* Ajusta según sea necesario */
+    font-size: 3rem;
+    color: #dc4900; /* Color de la flecha */
+    animation: bounce 1s infinite; /* Animación opcional */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
 
 </style>
 <body>
@@ -158,40 +182,46 @@ a:hover {
             <div class="card mb-3">
                 <a href="schedule.html#housecall-pro-chat-bubble" class="text-decoration-none" target="_blank">
                 <div class="card-body">
-                    <img src="assets/images/iconos - linktree/schedule.png" alt="Local Plumbers Schedule a Service Online" width="40" class="me-3">
-                    Schedule a Service Online
+                    <i class="bi bi-calendar-week-fill icon-color"><span style="font-size: 18px; font-style: normal; color: black;"> Schedule a Service Online</span></i>
+                    <!-- <img src="assets/images/iconos - linktree/schedule.png" alt="Local Plumbers Schedule a Service Online" width="40" class="me-3">
+                    Schedule a Service Online -->
                 </div>
             </a>
             </div>
             <div class="card mb-3">
                 <a href="tel:+18555056225" class="text-decoration-none">
                 <div class="card-body">
-                    <img src="assets/images/iconos - linktree/phone.png" alt="Local Plumbers Give Us a Call" width="40" class="me-3">
-                    Give Us a Call
+                    <i class="bi bi-telephone-fill icon-color"><span style="font-size: 18px; font-style: normal; color: black;"> Give Us a Call</span></i>
+                    <!-- <img src="assets/images/iconos - linktree/phone.png" alt="Local Plumbers Give Us a Call" width="40" class="me-3"> -->
                 </div>
             </a>
             </div>
             <div class="card mb-3">
                 <a href="javascript:void(0);" class="text-decoration-none" onclick="loadChatScriptAndOpenChat()">
                     <div class="card-body">
-                        <img src="assets/images/iconos - linktree/chat.png" alt="Local Plumbers LiveChat with Us" width="40" class="me-3">
-                        LiveChat with Us
+                        <i class="bi bi-chat-dots-fill icon-color"><span style="font-size: 18px; font-style: normal; color: black;">  LiveChat with Us</span></i>
+                        <!-- <img src="assets/images/iconos - linktree/chat.png" alt="Local Plumbers LiveChat with Us" width="40" class="me-3">
+                        LiveChat with Us -->
                     </div>
                 </a>
             </div>
             <div class="card mb-3">
                 <a href="https://localplumbersla.com/" class="text-decoration-none">
                 <div class="card-body">
+                    <i class="bi bi-browser-chrome icon-color"><span style="font-size: 18px; font-style: normal; color: black;"> Website</span></i>
+<!-- 
                     <img src="assets/images/iconos - linktree/browser.png" alt="Local Plumbers Website" width="40" class="me-3">
-                    Website
+                    Website -->
                 </div>
             </a>
             </div>
             <div class="card mb-3">
                 <a href="contact.vcf" class="text-decoration-none" download>
                 <div class="card-body">
+                    <i class="bi bi-person-plus-fill icon-color"><span style="font-size: 18px; font-style: normal; color: black;"> Add me to Your Contacts</span></i>
+<!-- 
                     <img src="assets/images/iconos - linktree/user.png" alt="Local Plumbers Add me to Your Contacts" width="40" class="me-3">
-                    Add me to Your Contacts
+                    Add me to Your Contacts -->
                 </div>
             </a>
             </div>
@@ -199,6 +229,12 @@ a:hover {
             
         </div>
     </div>
+
+    <div class="arrow-indicator">&darr;</div> <!-- Unicode para una flecha derecha -->
+
+   <!-- Script de detección de visibilidad -->
+
+
 
     <!-- Mostrar el icono del chat -->
     <script>
