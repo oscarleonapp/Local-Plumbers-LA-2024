@@ -136,6 +136,7 @@ a:hover {
     font-size: 3rem;
     color: #dc4900; /* Color de la flecha */
     animation: bounce 1s infinite; /* Animación opcional */
+    display: none; /* Oculta el icono inicialmente */
 }
 
 /* Animación de rebote */
@@ -196,15 +197,7 @@ a:hover {
                 </div>
             </a>
             </div>
-            <div class="card mb-3">
-                <a href="javascript:void(0);" class="text-decoration-none" onclick="loadChatScriptAndOpenChat()">
-                    <div class="card-body">
-                        <i class="bi bi-chat-dots-fill icon-color"><span style="font-size: 18px; font-style: normal; color: black;">  LiveChat with Us</span></i>
-                        <!-- <img src="assets/images/iconos - linktree/chat.png" alt="Local Plumbers LiveChat with Us" width="40" class="me-3">
-                        LiveChat with Us -->
-                    </div>
-                </a>
-            </div>
+
             <div class="card mb-3">
                 <a href="https://localplumbersla.com/" class="text-decoration-none">
                 <div class="card-body">
@@ -226,6 +219,15 @@ a:hover {
             </a>
             </div>
 
+            <div class="card mb-3">
+                <a href="javascript:void(0);" class="text-decoration-none" onclick="loadChatScriptAndOpenChat()">
+                    <div class="card-body">
+                        <i class="bi bi-chat-dots-fill icon-color"><span style="font-size: 18px; font-style: normal; color: black;">  LiveChat with Us</span></i>
+                        <!-- <img src="assets/images/iconos - linktree/chat.png" alt="Local Plumbers LiveChat with Us" width="40" class="me-3">
+                        LiveChat with Us -->
+                    </div>
+                </a>
+            </div>
             
         </div>
     </div>
@@ -234,11 +236,12 @@ a:hover {
 
    <!-- Script de detección de visibilidad -->
 
-
-
-    <!-- Mostrar el icono del chat -->
+    <!-- Mostrar Flecha -->
     <script>
         function loadChatScriptAndOpenChat() {
+            // Muestra el icono de flecha
+            document.querySelector('.arrow-indicator').style.display = 'block';
+    
             // Carga el script del chat solo si aún no está cargado
             if (!document.getElementById("housecall-pro-chat-bubble")) {
                 const script = document.createElement("script");
@@ -248,11 +251,11 @@ a:hover {
                 script.setAttribute("data-color", "#ff6a00");
                 script.setAttribute("data-organization", "545c3b04-d309-40f3-a781-162a89ea6502");
                 script.defer = true;
-
+    
                 // Agrega el script al DOM
                 document.body.appendChild(script);
-
-                // Espera a que el script cargue y luego abre el chat
+    
+                // Abre el chat al cargar el script
                 script.onload = function() {
                     if (typeof HCPWidget !== "undefined" && typeof HCPWidget.openModal === "function") {
                         HCPWidget.openModal();
@@ -266,8 +269,6 @@ a:hover {
             }
         }
     </script>
-    
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
